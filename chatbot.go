@@ -89,7 +89,7 @@ func generateImage(bot *tgbotapi.BotAPI, chatID int64, commandText string, numbe
 
 func generateResponse(bot *tgbotapi.BotAPI, chatID int64, messageText string) {
 	response, err := openai.Complete(messageText, &openai.CompletionRequest{
-		Model:            "text-davinci-002",
+		Model:            "text-davinci-003",
 		Prompt:           "You are an AI named Sonic and you are in a conversation with a human. You can answer questions, provide information, and help with a wide variety of tasks.\n\n" + messageText,
 		Temperature:      0.7,
 		MaxTokens:        256,
